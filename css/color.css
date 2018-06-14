@@ -1,1 +1,25 @@
 @charset "utf-8";
+    body {
+      background-color: #000;
+    }
+
+    .container {
+      background-color: #4b4b4b;
+    }
+
+    #header {
+      background-color: #c7c7c7;
+    }
+
+    #content_photo {
+      background-color: #17538a;
+    }
+
+    #logo {
+      background-color: #72e5f9;
+    }
+
+    footer {
+      background-color: #724479;
+      color: #fff;
+    }
