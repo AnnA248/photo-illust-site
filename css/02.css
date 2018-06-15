@@ -16,6 +16,37 @@
       position: absolute;
     }
 
+    #menu {
+      width: 800px;
+      top: 490;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      position: absolute;
+    }
+
+    #menu ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    #menu li {
+      float: left;
+      width: 200px;
+      margin: 0;
+      padding: 0;
+    }
+
+    #menu a {
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      padding: 20px 0px;
+      width: 100%;
+    }
+
     #content_photo {
       height: 2000px;
       width: 1080px;
