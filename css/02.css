@@ -17,29 +17,28 @@
     }
 
     #menu {
-      width: 800px;
       top: 490;
       right: 0;
       bottom: 0;
       left: 0;
-      margin: auto;
       position: absolute;
     }
 
-    #menu ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
+    .menubar {
+      width: 800px;
+      margin: auto;
+      text-align: center;
     }
 
-    #menu li {
+    .menubar li {
+      list-style-type: none;
       float: left;
       width: 200px;
       margin: 0;
       padding: 0;
     }
 
-    #menu a {
+    .menubar a {
       text-decoration: none;
       text-align: center;
       display: block;

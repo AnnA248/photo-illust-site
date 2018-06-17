@@ -15,12 +15,12 @@
       background-color: #72e5f9;
     }
 
-    #menu a {
+    .menubar a {
       background-color: #000;
       color: #fff;
     }
 
-    #menu a:hover {
+    .menubar a:hover {
     background-color: #00ff5d;
     color: #fff;
     }
