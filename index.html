@@ -9,15 +9,17 @@
 
   <link href="css/color.css" rel="stylesheet" type="text/css" />
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
-  <script src="js/jquery.sticky.js" type="text/javascript"></script>
+  <!-- ギャラリー js 始 -->
+  <link rel="stylesheet" href="css/gallery12.css" type="text/css" media="screen" />
+  <script type="text/javascript" src="js/popbox.js"></script>
   <script type="text/javascript">
-    $(window).load(function() {
-      $("#menu").sticky({
-        topSpacing: 0
-      });
-    });
+    <!--
+    popBoxWaitImage.src = "images/spinner40.gif";
+    popBoxRevertImage = "images/magminus.gif";
+    popBoxPopImage = "images/magplus.gif";
+    // -->
   </script>
+  <!-- ギャラリー js 終 -->
 </head>
 
 <body>
@@ -25,6 +27,7 @@
     <div id="header">
       <div id="logo">
       </div>
+
       <div id="menu">
         <ul class="menubar">
           <li><a href="#">MAKING</a></li>
@@ -42,6 +45,19 @@
     </footer>
 
   </div>
+
+  <!-- メニューバー js　始 -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
+  <script src="js/jquery.sticky.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(window).load(function() {
+      $("#menu").sticky({
+        topSpacing: 0
+      });
+    });
+  </script>
+  <!-- メニューバー js　終 -->
+
 </body>
 
 </html>
