@@ -10,9 +10,24 @@
 
   <link href="css/color.css" rel="stylesheet" type="text/css" />
 
-  <!-- メニュー切り替え　始 -->
-  <script type="text/javascript" src="js/tab.js"></script>
-  <!-- メニュー切り替え　終 -->
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      /**
+       * それぞれのタブをクリックしたとき開きたい要素がどれになるかはHTMLの方に書くようにしたので、Javascriptの方は1行でよい
+       * id="tabs"の中のhrefが#panel何々となっているa要素をクリックすると
+       * classがpanelとなっているdivを全部非表示にして、クリックしたタブのハッシュと同じIDの要素だけをフェードインして表示
+       * return false で onclick="return false" と同様にデフォルトのイベント処理は抑制
+       */
+      $('#tabs a[href^="#content"]').click(function() {
+        $("#tabs .content").hide();
+        $(this.hash).fadeIn();
+        return false;
+      });
+      //わざと1つ目を表示させておくことができます
+      $('#tabs a[href^="#content"]:eq(0)').trigger('click');
+    })
+  </script>
 
   <!-- ギャラリー js 始 -->
   <link rel="stylesheet" href="css/gallery.css" type="text/css" media="screen" />
@@ -29,145 +44,146 @@
 
 <body>
   <div class="container">
-    <div id="header">
-      <div id="logo">
+    <div id="tabs">
+      <div id="header">
+        <div id="logo">
+        </div>
+        <div id="menu">
+          <ul class="menubar">
+            <li><a href="#content1">MAKING</a></li>
+            <li><a href="#content2">PHOTO</a></li>
+            <li><a href="#content3">ILLUST</a></li>
+            <li><a href="#content4">PROFILE</a></li>
+          </ul>
+        </div>
       </div>
+      <!-- メイキング　始 -->
+      <div id="content1" class="content">
+        <div id="content_making">
+        </div>
+      </div>
+      <!-- メイキング　終 -->
 
-      <div id="menu">
-        <ul class="menubar">
-          <li><a href="#content_01">MAKING</a></li>
-          <li><a href="#content_02">PHOTO</a></li>
-          <li><a href="#content_03">ILLUST</a></li>
-          <li><a href="#content_04">PROFILE</a></li>
+      <!-- 写真　始 -->
+      <div id="content2" class="content">
+        <div id="content_photo">
+          <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #1" />
+          <img class="smallimage" src="img/photo/2_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/2_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/3_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/3_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/4_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/4_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/5_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/5_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+        </div>
+
+        <div id="content_photo">
+          <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #2" />
+          <img class="smallimage" src="img/photo/2_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/2_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/3_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/3_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/4_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/4_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/5_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/5_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #15" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #16" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #17" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #18" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #19" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+        </div>
+
+        <div id="content_photo">
+          <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #3" />
+          <img class="smallimage" src="img/photo/2_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/2_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/3_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/3_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/4_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/4_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/5_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/5_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #15" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #16" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #17" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #18" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #19" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+        </div>
+
+        <div id="content_photo">
+          <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #4" />
+          <img class="smallimage" src="img/photo/2_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/2_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/3_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/3_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/4_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/4_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/5_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/5_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #15" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #16" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #17" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #18" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #19" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+        </div>
       </div>
+      <!-- 写真　終 -->
+
+      <!-- イラスト　始 -->
+      <div id="content3" class="content">
+        <div id="content_illust">
+          <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #1" />
+          <img class="smallimage" src="img/photo/2_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/2_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/3_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/3_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/4_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/4_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/5_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/5_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
+        </div>
+      </div>
+      <!-- イラスト　終 -->
+
+      <!-- プロフィール　始 -->
+      <div id="content4" class="content">
+        <div id="content_profile">
+        </div>
+      </div>
+      <!-- プロフィール　終 -->
     </div>
-
-    <!-- メイキング　始 -->
-    <div id="content_01">
-      <div id="content_making">
-      </div>
-    </div>
-    <!-- メイキング　終 -->
-
-    <!-- 写真　始 -->
-    <div id="content_02">
-      <div id="content_photo">
-        <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #1" />
-        <img class="smallimage" src="img/photo/2_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/2_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/3_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/3_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/4_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/4_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/5_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/5_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-      </div>
-
-      <div id="content_photo">
-        <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #2" />
-        <img class="smallimage" src="img/photo/2_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/2_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/3_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/3_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/4_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/4_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/5_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/5_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #15" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #16" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #17" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #18" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #19" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-      </div>
-
-      <div id="content_photo">
-        <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #3" />
-        <img class="smallimage" src="img/photo/2_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/2_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/3_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/3_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/4_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/4_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/5_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/5_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #15" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #16" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #17" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #18" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #19" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-      </div>
-
-      <div id="content_photo">
-        <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #4" />
-        <img class="smallimage" src="img/photo/2_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/2_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/3_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/3_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/4_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/4_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/5_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/5_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #15" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #16" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #17" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #18" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #19" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-      </div>
-    </div>
-    <!-- 写真　終 -->
-
-    <!-- イラスト　始 -->
-    <div id="content_03">
-      <div id="content_illust">
-        <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #1" />
-        <img class="smallimage" src="img/photo/2_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/2_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/3_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/3_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/4_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/4_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/5_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/5_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/6_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/6_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/7_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/7_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/8_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/8_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-        <img class="smallimage" src="img/photo/9_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/9_b.jpg" onclick="Pop(this,30, null);" />
-      </div>
-    </div>
-    <!-- イラスト　終 -->
-
-    <!-- プロフィール　始 -->
-    <div id="content_04">
-      <div id="content_profile">
-      </div>
-    </div>
-    <!-- プロフィール　終 -->
 
     <footer>
       Copyright (c) 2018 Parafic all Rights Reseved.

@@ -1,26 +1,30 @@
 @charset "utf-8";
-    #content_01 {
+    .content {
+      display: none;
+    }
+
+    #content1 {
       height: auto;
       width: 1080px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    #content_02 {
+    #content2 {
       height: auto;
       width: 1080px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    #content_03 {
+    #content3 {
       height: auto;
       width: 1080px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    #content_04 {
+    #content4 {
       height: auto;
       width: 1080px;
       margin-left: auto;
