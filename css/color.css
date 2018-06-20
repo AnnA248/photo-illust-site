@@ -27,6 +27,11 @@
 
     #content_making {
       background-color: #00742b;
+      color: #fff;
+    }
+
+    #makeicon {
+      background-color: #fff;
     }
 
     #content_photo {
@@ -39,6 +44,11 @@
 
     #content_profile {
       background-color: #d40e0e;
+      color: #fff;
+    }
+
+    #content_profile img {
+      background-color: #fff;
     }
 
     footer {
