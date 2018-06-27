@@ -12,22 +12,22 @@
     }
 
     #logo {
-      background-color: #56a764;
+      background-color: none;
     }
 
     .menubar a {
       background-color: none;
-      color: #56a764;
+      color: #3e3e3e;
     }
 
     .menubar a:hover {
     background-color: none;
-    color: #a0c238;
+    color: #656565;
     }
 
     #content_making {
       background-color: none;
-      color: #fff;
+      color: #56a764;
     }
 
     #makeicon {

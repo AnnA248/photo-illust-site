@@ -3,7 +3,7 @@
       height: 100%;
       width: 100%;
       position: relative;
-      background-image: url(../img/back_01.jpg);
+      background-image: none;
       background-position: center;
       background-repeat: no-repeat;
       background-attachment: fixed;
@@ -16,6 +16,15 @@
       top: 0;
       right: 0;
       bottom: 100;
+      left: 0;
+      margin: auto;
+      position: absolute;
+    }
+
+    #logo img {
+      top: 0;
+      right: 0;
+      bottom: 0;
       left: 0;
       margin: auto;
       position: absolute;
