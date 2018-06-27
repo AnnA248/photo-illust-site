@@ -20,6 +20,14 @@
       float: left;
     }
 
+    .makeicon_01 {
+      border-radius: 3px 200px;
+    }
+
+    .makeicon_02 {
+      border-radius: 200px 3px;
+    }
+
     #content_profile {
       height: 300px;
       width: 1040px;
