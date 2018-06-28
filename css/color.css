@@ -1,6 +1,8 @@
 @charset "utf-8";
     body {
-      background-color: #fff;
+      background-image: url(../img/back_c_01.jpg);
+      background-repeat: repeat;
+      background-color: #feffd9;
     }
 
     .container {
@@ -8,6 +10,8 @@
     }
 
     #header {
+      background-image: url(../img/back_h_02.jpg);
+      background-repeat: repeat;
       background-color: none;
     }
 
@@ -22,16 +26,16 @@
 
     .menubar a:hover {
     background-color: none;
-    color: #656565;
+    color: #f7ffff;
     }
 
     #content_making {
       background-color: none;
-      color: #56a764;
+      color: #f7ffff;
     }
 
     #makeicon {
-      background-color: #56a764;
+      background-color: #f7ffff;
     }
 
     #content_photo {
@@ -48,14 +52,14 @@
 
     #content_profile {
       background-color: none;
-      color: #56a764;
+      color: #f7ffff;
     }
 
     #content_profile img {
-      background-color: #56a764;
+      background-color: #f7ffff;
     }
 
     footer {
       background-color: none;
-      color: #56a764;
+      color: #f7ffff;
     }
