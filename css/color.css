@@ -1,5 +1,7 @@
 @charset "utf-8";
     body {
+      background-image: url(../img/back_01.jpg);
+      background-repeat: repeat;
       background-color: #153044;
     }
 
@@ -8,8 +10,6 @@
     }
 
     #header {
-      background-image: url(../img/back_h_02.jpg);
-      background-repeat: repeat;
       background-color: none;
     }
 
@@ -19,21 +19,36 @@
 
     .menubar a {
       background-color: none;
-      color: #022155;
+    }
+
+    .menu_01 {
+      color: #6ec4db;
+    }
+
+    .menu_02 {
+      color: #fa7c92;
+    }
+
+    .menu_03 {
+      color: #fbe971;
+    }
+
+    .menu_04 {
+      color: #66ab8c;
     }
 
     .menubar a:hover {
     background-color: none;
-    color: #61ffff;
+    color: #d7d7d7;
     }
 
     #content_making {
       background-color: none;
-      color: #d6f4f4;
+      color: #6ec4db;
     }
 
     #makeicon {
-      background-color: #d6f4f4;
+      background-color: #6ec4db;
     }
 
     #content_photo {
@@ -44,20 +59,24 @@
       background-color: none;
     }
 
-    .icon_01 {
-      background-color: none;
+    #content_photo .icon_01 {
+      background-color: #fa7c92;
+    }
+
+    #content_illust .icon_01 {
+      background-color: #fbe971;
     }
 
     #content_profile {
       background-color: none;
-      color: #d6f4f4;
+      color: #66ab8c;
     }
 
     #content_profile img {
-      background-color: #d6f4f4;
+      background-color: #66ab8c;
     }
 
     footer {
       background-color: none;
-      color: #d6f4f4;
+      color: #343636;
     }
