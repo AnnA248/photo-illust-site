@@ -9,8 +9,8 @@
         width: 50%;
         margin: 30px;
         padding: 10px 20px;
-        border: 2px solid #aaa;
-        background: #fff;
+        border: 2px solid #6ec4db;
+        background: #fbf8ce;
     }
 
     .modal-content p {
@@ -41,22 +41,31 @@
     }
 
     .modal-open {
-        color: #00f;
         text-decoration: underline;
     }
 
     .modal-open:hover {
         cursor: pointer;
-        color: #f00;
     }
 
     .modal-close {
-        color: #00f;
-        text-decoration: underline;
+        text-decoration: none;
     }
 
     .modal-close:hover {
         cursor: pointer;
-        color: #f00;
     }
- 
+
+    #modal_making {
+      height: 300px;
+      width: 100%;
+      border-bottom: 2px solid #6ec4db;
+      padding-bottom: 20px;
+    }
+
+    #modal_making img {
+      height: 100%;
+      width: 40%;
+      margin-left: 30px;
+      float: right;
+    }
