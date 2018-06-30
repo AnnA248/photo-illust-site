@@ -9,6 +9,15 @@
       background-color: none;
     }
 
+    #page-top a {
+      background-color: #ff98aa;
+      color: #fff;
+    }
+
+    #page-top a:hover {
+      background-color: #ffd7de;
+    }
+
     #header {
       background-color: none;
     }

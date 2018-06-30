@@ -11,6 +11,7 @@
 
   <link href="css/color.css" rel="stylesheet" type="text/css" />
 
+  <!-- コンテンツ切り替え js 始 -->
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
   <script type="text/javascript">
     $(function() {
@@ -29,17 +30,37 @@
       $('#tabs a[href^="#content"]:eq(0)').trigger('click');
     })
   </script>
+  <!-- コンテンツ切り替え js 終 -->
+
+  <!-- topに戻るボタン js 始 -->
+  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      var topBtn = $('#page-top');
+      topBtn.hide();
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+          topBtn.fadeIn();
+        } else {
+          topBtn.fadeOut();
+        }
+      });
+      //スクロールしてトップ
+      topBtn.click(function() {
+        $('body,html').animate({
+          scrollTop: 0
+        }, 500);
+        return false;
+      });
+    });
+  </script>
+  <!-- topに戻るボタン js 終 -->
 
   <!-- ギャラリー js 始 -->
-  <link rel="stylesheet" href="css/gallery.css" type="text/css" media="screen" />
-  <script type="text/javascript" src="js/popbox.js"></script>
-  <script type="text/javascript">
-
-    popBoxWaitImage.src = "images/spinner40.gif";
-    popBoxRevertImage = "images/magminus.gif";
-    popBoxPopImage = "images/magplus.gif";
-
-  </script>
+  <link href="css/gallery.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js" type="text/javascript"></script>
   <!-- ギャラリー js 終 -->
 </head>
 
@@ -99,21 +120,49 @@
       <!-- 写真　始 -->
       <div id="content2" class="content">
         <div id="content_photo">
-          <img class="icon_01" src="img/icon/photo/1_s.jpg" width="195" height="120" alt="icon #1" />
-          <img class="smallimage" src="img/photo/01_s.jpg" width="195" height="120" alt="Photo #1" pbsrc="img/photo/01_b.jpg" onclick="Pop(this,30, null);"/>
-          <img class="smallimage" src="img/photo/02_s.jpg" width="195" height="120" alt="Photo #2" pbsrc="img/photo/02_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/03_s.jpg" width="195" height="120" alt="Photo #3" pbsrc="img/photo/03_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/04_s.jpg" width="195" height="120" alt="Photo #4" pbsrc="img/photo/04_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/05_s.jpg" width="195" height="120" alt="Photo #5" pbsrc="img/photo/05_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/06_s.jpg" width="195" height="120" alt="Photo #6" pbsrc="img/photo/06_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/07_s.jpg" width="195" height="120" alt="Photo #7" pbsrc="img/photo/07_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/08_s.jpg" width="195" height="120" alt="Photo #8" pbsrc="img/photo/08_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/09_s.jpg" width="195" height="120" alt="Photo #9" pbsrc="img/photo/09_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/10_s.jpg" width="195" height="120" alt="Photo #10" pbsrc="img/photo/10_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/11_s.jpg" width="195" height="120" alt="Photo #11" pbsrc="img/photo/11_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/12_s.jpg" width="195" height="120" alt="Photo #12" pbsrc="img/photo/12_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/13_s.jpg" width="195" height="120" alt="Photo #13" pbsrc="img/photo/13_b.jpg" onclick="Pop(this,30, null);" />
-          <img class="smallimage" src="img/photo/14_s.jpg" width="195" height="120" alt="Photo #14" pbsrc="img/photo/14_b.jpg" onclick="Pop(this,30, null);" />
+          <img class="icon_01" src="img/icon/01.jpg" width="195" height="120" alt="icon_01" />
+          <a href="img/photo/01_b.jpg" data-lightbox="01" data-title="#01_b">
+             <img src="img/photo/01_s.jpg" alt="#01_s">
+          </a>
+          <a href="img/photo/02_b.jpg" data-lightbox="01" data-title="#02_b">
+             <img src="img/photo/02_s.jpg" alt="#02_s">
+          </a>
+          <a href="img/photo/03_b.jpg" data-lightbox="01" data-title="#03_b">
+             <img src="img/photo/03_s.jpg" alt="#03_s">
+          </a>
+          <a href="img/photo/04_b.jpg" data-lightbox="01" data-title="#04_b">
+             <img src="img/photo/04_s.jpg" alt="#04_s">
+          </a>
+          <a href="img/photo/05_b.jpg" data-lightbox="01" data-title="#05_b">
+             <img src="img/photo/05_s.jpg" alt="#05_s">
+          </a>
+          <a href="img/photo/06_b.jpg" data-lightbox="01" data-title="#06_b">
+             <img src="img/photo/06_s.jpg" alt="#06_s">
+          </a>
+          <a href="img/photo/07_b.jpg" data-lightbox="01" data-title="#07_b">
+             <img src="img/photo/07_s.jpg" alt="#07_s">
+          </a>
+          <a href="img/photo/08_b.jpg" data-lightbox="01" data-title="#08_b">
+             <img src="img/photo/08_s.jpg" alt="#08_s">
+          </a>
+          <a href="img/photo/09_b.jpg" data-lightbox="01" data-title="#09_b">
+             <img src="img/photo/09_s.jpg" alt="#09_s">
+          </a>
+          <a href="img/photo/10_b.jpg" data-lightbox="01" data-title="#10_b">
+             <img src="img/photo/10_s.jpg" alt="#10_s">
+          </a>
+          <a href="img/photo/11_b.jpg" data-lightbox="01" data-title="#11_b">
+             <img src="img/photo/11_s.jpg" alt="#11_s">
+          </a>
+          <a href="img/photo/12_b.jpg" data-lightbox="01" data-title="#12_b">
+             <img src="img/photo/12_s.jpg" alt="#12_s">
+          </a>
+          <a href="img/photo/13_b.jpg" data-lightbox="01" data-title="#13_b">
+             <img src="img/photo/13_s.jpg" alt="#13_s">
+          </a>
+          <a href="img/photo/14_b.jpg" data-lightbox="01" data-title="#14_b">
+             <img src="img/photo/14_s.jpg" alt="#14_s">
+          </a>
         </div>
 
         <div id="content_photo">
@@ -232,6 +281,8 @@
 
       </div>
       <!-- プロフィール　終 -->
+
+      <p id="page-top"><a href="#header">TOPへ戻る</a></p>
     </div>
 
     <footer>
@@ -239,19 +290,6 @@
     </footer>
 
   </div>
-
-  <!-- メニューバー js　始 -->
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js" type="text/javascript"></script>
-  <script src="js/jquery.sticky.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    $(window).load(function() {
-      $("#menu").sticky({
-        topSpacing: 0
-      });
-    });
-  </script>
-  <!-- メニューバー js　終 -->
-
 </body>
 
 </html>

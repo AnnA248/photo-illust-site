@@ -18,10 +18,20 @@
     }
 
     .icon_01 {
-      margin: 4px;
+      border-radius: 20px 3px;
+      margin: 3px;
     }
 
-    .smallimage {
-      border: 1px solid #CCC;
+    #content_photo a {
+      text-decoration: none;
+      margin: 3px;
+    }
+
+    #content_photo img {
+      border-radius: 20px 3px;
+    }
+
+    #content_illust a {
+      text-decoration: none;
       margin: 3px;
     }
