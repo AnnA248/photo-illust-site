@@ -9,17 +9,12 @@
     }
 
     #content_illust {
-      height: auto;
+      height: 600px;
       width: 1040px;
       padding: 20px;
       margin-bottom: 30px;
       margin-left: auto;
       margin-right: auto;
-    }
-
-    .icon_01 {
-      border-radius: 20px 3px;
-      margin: 3px;
     }
 
     #content_photo a {
@@ -31,7 +26,31 @@
       border-radius: 20px 3px;
     }
 
-    #content_illust a {
+    #smallimg {
+      height: 195px;
+      width: 195px;
+      margin: 3px 6px;
+      position: relative;
+      float: left;
+    }
+
+    .icon_02 {
+      font-size: 28px;
+      line-height: 195px;
+      vertical-align: middle;
+      text-align: center;
+    }
+
+    #smallimg a {
       text-decoration: none;
-      margin: 3px;
+    }
+
+    #smallimg img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      margin: auto;
+      border-radius: 20px 3px;
     }
