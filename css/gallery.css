@@ -1,6 +1,6 @@
 @charset "utf-8";
     #content_photo {
-      height: auto;
+      height: 600px;
       width: 1040px;
       padding: 20px;
       margin-bottom: 30px;
@@ -34,8 +34,9 @@
       float: left;
     }
 
-    .icon_02 {
+    .icon {
       font-size: 28px;
+      font-weight: bolder;
       line-height: 195px;
       vertical-align: middle;
       text-align: center;

@@ -88,8 +88,12 @@
       background-color: none;
     }
 
-    #content_photo .icon_01 {
-      background-color: #fa7c92;
+    #content_photo .icon {
+      color: #fa7c92;
+    }
+
+    #content_illust .icon {
+      color: #fbe971;
     }
 
     #content_profile {
