@@ -76,8 +76,12 @@
       color: #d7d7d7;
     }
 
-    #modal_making img {
-      background-color: #6ec4db;
+    #modal_making {
+      color: #3b3b3b;
+    }
+
+    #modal_making h2 {
+      color: #6ec4db;
     }
 
     #content_photo {

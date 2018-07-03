@@ -57,15 +57,24 @@
     }
 
     #modal_making {
-      height: 300px;
+      height: auto;
       width: 100%;
       border-bottom: 2px solid #6ec4db;
       padding-bottom: 20px;
+      position: relative;
+    }
+
+    .content_write {
+      height: auto;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .content_write p {
+      margin-bottom: 10px;
     }
 
     #modal_making img {
-      height: 100%;
-      width: 40%;
-      margin-left: 30px;
-      float: right;
+      display: block;
+      margin: auto;
     }
