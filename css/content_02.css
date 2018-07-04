@@ -20,15 +20,13 @@
       float: left;
     }
 
-    .makeicon_01 {
+    .makeicon_01 img {
       border-radius: 240px 15px 185px 15px / 15px 200px 15px 185px;
-      margin: 2em 0;
       padding: 0;
     }
 
-    .makeicon_02 {
+    .makeicon_02 img {
       border-radius: 240px 15px 185px 15px / 15px 200px 15px 185px;
-      margin: 2em 0;
       padding: 0;
     }
 
